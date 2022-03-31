@@ -1,5 +1,6 @@
 {
   "name": "martvanweeghel.nl",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +17,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "docker buildx build --platform linux/arm64 -t martvanweeghel/martvanweeghel.nl:latest --push ."
   },
   "eslintConfig": {
     "extends": [
