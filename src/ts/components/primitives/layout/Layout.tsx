@@ -1,6 +1,5 @@
-import NavBar from '@components/features/navBar/NavBar';
-import { ReactChild, useState } from "react";
-import Loading from '../loading/Loading';
+import Loading from '@components/primitives/loading/Loading';
+import { ReactChild, useState } from 'react';
 
 type Props = {
     children?: ReactChild[] | ReactChild;
@@ -11,17 +10,16 @@ const Layout = ({ children }: Props) => {
 
     setTimeout(() => {
         setIsLoading(false);
-    }, 500);
+    }, 1000);
 
     return (
         <>
-            <NavBar />
-            <main className='absolute w-full h-full pt-40 pb-4 pl-12 pr-12'>
-                {
-                    isLoading
-                        ? <Loading />
-                        : children
+            <main className='absolute top-0 bottom-0 w-full h-full pt-44 pb-4 pl-12 pr-12 overflow-hidden'>
+                {isLoading
+                    ? <Loading />
+                    : null
                 }
+                {children}
             </main>
         </>
     );

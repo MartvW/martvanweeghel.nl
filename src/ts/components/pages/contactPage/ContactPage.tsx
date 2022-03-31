@@ -1,9 +1,14 @@
-import Layout from '../../primitives/layout/Layout';
+import ComingSoon from '@components/primitives/comingSoon/ComingSoon';
+import Layout from '@components/primitives/layout/Layout';
+import { Helmet } from 'react-helmet';
 
 const ContactPage = () => {
     return (
         <Layout>
-            <h1 className='text-white'>Contact</h1>
+            <Helmet>
+                <title>Mart van Weeghel - Contact</title>
+            </Helmet>
+            <ComingSoon />
         </Layout>
     );
 };

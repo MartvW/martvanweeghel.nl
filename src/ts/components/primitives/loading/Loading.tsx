@@ -6,7 +6,7 @@ type Props = {
 
 const Loading = ({ type = 'spin' }: Props) => {
     return (
-        <div className="relative flex justify-center items-center h-full">
+        <div className="absolute top-0 left-0 flex justify-center items-center h-full w-full z-50 ">
             <ReactLoading
                 color='lightblue'
                 type={type}

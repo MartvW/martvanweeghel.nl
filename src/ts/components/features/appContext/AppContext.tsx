@@ -1,6 +1,7 @@
 import { config } from '@utils/config';
 import { createContext, Dispatch, ReactChild, SetStateAction, useEffect, useState } from 'react';
 import { getInitialTheme } from './themeContext';
+import StarParticles from '@components/primitives/particles/StarParticles';
 
 type Props = {
     initialTheme?: any;
@@ -16,7 +17,7 @@ const ContextDefaultValue: ContextData = {
     theme: getInitialTheme(),
     setTheme: (value: SetStateAction<string>): void => {
         throw new Error('Function not implemented.');
-    }
+    },
 };
 
 export const AppContext = createContext<ContextData>(ContextDefaultValue);
@@ -43,9 +44,12 @@ const AppContextProvider = ({ initialTheme, children }: Props) => {
     }, [theme]);
 
     return (
-        <AppContext.Provider value={{ theme, setTheme }}>
+        <AppContext.Provider value={{
+            theme, setTheme,
+        }}>
+            <StarParticles />;
             {children}
-        </AppContext.Provider>
+        </AppContext.Provider >
     );
 };
 
