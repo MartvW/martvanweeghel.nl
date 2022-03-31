@@ -6,9 +6,27 @@
       "dom.iterable",
       "esnext"
     ],
+    "paths": {
+      "@images/*": [
+        "./src/images/*"
+      ],
+      "@sass/*": [
+        "./src/sass/*"
+      ],
+      "@components/*": [
+        "./src/ts/components/*"
+      ],
+      "@routes/*": [
+        "./src/ts/routes/*"
+      ],
+      "@utils/*": [
+        "./src/ts/utils/*"
+      ]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "strictNullChecks": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
