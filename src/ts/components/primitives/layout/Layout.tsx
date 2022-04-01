@@ -10,10 +10,9 @@ const Layout = ({ children }: Props) => {
     const [isLoading, setIsLoading] = useState(true);
     const { isMenuPanelOpen } = useContext(AppContext);
 
-
     setTimeout(() => {
         setIsLoading(false);
-    }, 1000);
+    }, 500);
 
     return (
         <>
@@ -24,9 +23,9 @@ const Layout = ({ children }: Props) => {
             <main className='absolute top-0 bottom-0 w-full h-full pt-44 pb-4 pl-12 pr-12'>
                 {isLoading
                     ? <Loading />
-                    : null
+                    : children
                 }
-                {children}
+
             </main>
         </>
     );

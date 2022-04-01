@@ -8,6 +8,18 @@ const StarParticles = () => {
                 "detectRetina": true,
                 "duration": 0,
                 "fpsLimit": 120,
+                "interactivity": {
+                    "events": {
+                        "onClick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "onHover": {
+                            "enable": true,
+                            "mode": 'connect'
+                        },
+                    }
+                },
                 "particles": {
                     "move": {
                         "angle": {
@@ -15,11 +27,11 @@ const StarParticles = () => {
                             "value": 90
                         },
                         "attract": {
-                            "distance": 200,
-                            "enable": false,
+                            "distance": 50,
+                            "enable": true,
                             "rotate": {
-                                "x": 600,
-                                "y": 600
+                                "x": 5,
+                                "y": 5
                             }
                         },
                         "decay": 0,
@@ -29,9 +41,9 @@ const StarParticles = () => {
                         "enable": true,
                         "gravity": {
                             "acceleration": 9.81,
-                            "enable": false,
+                            "enable": true,
                             "inverse": false,
-                            "maxSpeed": 50
+                            "maxSpeed": .5
                         },
                         "path": {
                             "clamp": true,
@@ -54,7 +66,7 @@ const StarParticles = () => {
                         },
                         "random": true,
                         "size": false,
-                        "speed": 0.5,
+                        "speed": 1,
                         "spin": {
                             "acceleration": 0,
                             "enable": false
@@ -92,7 +104,7 @@ const StarParticles = () => {
                     "size": {
                         "random": {
                             "enable": true,
-                            "minimumValue": 1
+                            "minimumValue": 5
                         },
                         "value": {
                             "min": 1,

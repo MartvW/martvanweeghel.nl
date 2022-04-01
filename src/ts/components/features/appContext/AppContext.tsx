@@ -23,7 +23,7 @@ const ContextDefaultValue: ContextData = {
     isMenuPanelOpen: false,
     setIsMenuPanelOpen: (value: SetStateAction<boolean>): void => {
         throw new Error('Function not implemented.');
-    }
+    },
 };
 
 export const AppContext = createContext<ContextData>(ContextDefaultValue);
@@ -53,7 +53,7 @@ const AppContextProvider = ({ initialTheme, children }: Props) => {
     return (
         <AppContext.Provider value={{
             theme, setTheme,
-            isMenuPanelOpen, setIsMenuPanelOpen
+            isMenuPanelOpen, setIsMenuPanelOpen,
         }}>
             <StarParticles />;
             {children}
