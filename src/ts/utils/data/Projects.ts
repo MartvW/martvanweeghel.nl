@@ -4,14 +4,14 @@ const projects: ProjectType[] = [
     {
         id: 1,
         name: 'JustDoIt',
-        description: 'An todo list application with a focus on simplicity and ease of use. The application is built with React.',
-        photo: 'https://todo.martvanweeghel.nl/favicon.ico',
+        description: 'An todo list application with a focus on simplicity and ease of use. The application is built with React and Typescript.',
+        photo: 'justdoit.svg',
         url: 'https://todo.martvanweeghel.nl/',
-        isVisible: false,
+        isVisible: true,
     },
     {
         id: 2,
-        name: 'martvanweeghel.nl',
+        name: 'www.martvanweeghel.nl',
         description: 'This website is a personal website of Mart van Weeghel. It is built with React and Typescript.',
         photo: 'https://martvanweeghel.nl/favicon.ico',
         url: 'https://martvanweeghel.nl/',
