@@ -11,6 +11,8 @@ type Props = {
 interface ContextData {
     theme: string;
     setTheme: Dispatch<SetStateAction<string>>;
+    isMenuPanelOpen: boolean;
+    setIsMenuPanelOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 const ContextDefaultValue: ContextData = {
@@ -18,12 +20,17 @@ const ContextDefaultValue: ContextData = {
     setTheme: (value: SetStateAction<string>): void => {
         throw new Error('Function not implemented.');
     },
+    isMenuPanelOpen: false,
+    setIsMenuPanelOpen: (value: SetStateAction<boolean>): void => {
+        throw new Error('Function not implemented.');
+    }
 };
 
 export const AppContext = createContext<ContextData>(ContextDefaultValue);
 
 const AppContextProvider = ({ initialTheme, children }: Props) => {
     const [theme, setTheme] = useState(ContextDefaultValue.theme);
+    const [isMenuPanelOpen, setIsMenuPanelOpen] = useState(ContextDefaultValue.isMenuPanelOpen);
 
     const rawSetTheme = (theme: any): void => {
         const root = window.document.documentElement;
@@ -46,6 +53,7 @@ const AppContextProvider = ({ initialTheme, children }: Props) => {
     return (
         <AppContext.Provider value={{
             theme, setTheme,
+            isMenuPanelOpen, setIsMenuPanelOpen
         }}>
             <StarParticles />;
             {children}
