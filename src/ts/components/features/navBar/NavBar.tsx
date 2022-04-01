@@ -4,6 +4,10 @@ import MartPNG from '@images/mart.png';
 import MenuButton from '@components/features/navBar/components/MenuPanel/MenuButton';
 import MenuPanel from '@components/features/navBar/components/MenuPanel/MenuPanel';
 import NavItem from '@components/features/navBar/components/NavItem';
+import { ReactComponent as HomeSVG } from '@images/home.svg';
+import { ReactComponent as FolderSVG } from '@images/folder.svg';
+import { ReactComponent as HelpSVG } from '@images/help.svg';
+import { ReactComponent as WorldSVG } from '@images/world.svg';
 import { PagePath } from '@routes/appUrls';
 
 type Props = {
@@ -24,10 +28,10 @@ const NavBar = ({ children }: Props) => {
                         <MenuPanel />
                     </div>
                     <div className='hidden md:flex items-center gap-10 text-white'>
-                        <NavItem to={PagePath.home} name='Home' />
-                        <NavItem to={PagePath.projects} name='Projects' />
-                        <NavItem to={PagePath.about} name='About' />
-                        <NavItem to={PagePath.contact} name='Contact' />
+                        <NavItem to={PagePath.home} icon={<HomeSVG />} name='Home' />
+                        <NavItem to={PagePath.projects} icon={<FolderSVG />} name='Projects' />
+                        <NavItem to={PagePath.about} icon={<HelpSVG />} name='About' />
+                        <NavItem to={PagePath.contact} icon={<WorldSVG />} name='Contact' />
                     </div>
                 </div>
             </nav>

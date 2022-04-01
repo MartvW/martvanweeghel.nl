@@ -19,6 +19,9 @@
       "@routes/*": [
         "./src/ts/routes/*"
       ],
+      "@types/*": [
+        "./src/ts/types/*"
+      ],
       "@utils/*": [
         "./src/ts/utils/*"
       ]
@@ -36,7 +39,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
   },
   "include": [
     "src"

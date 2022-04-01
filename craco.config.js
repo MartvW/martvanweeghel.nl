@@ -5,6 +5,7 @@ const createAliases = (prefix) => ({
     '@sass': `${prefix}/sass`,
     '@components': `${prefix}/ts/components`,
     '@routes': `${prefix}/ts/routes`,
+    '@types': `${prefix}/ts/types`,
     '@utils': `${prefix}/ts/utils`,
 });
 
