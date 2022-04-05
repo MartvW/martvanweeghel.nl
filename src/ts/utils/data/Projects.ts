@@ -24,6 +24,14 @@ const projects: ProjectType[] = [
         photo: 'https://www.landstedembo.nl/images/mbo/logo.png',
         url: 'https://narrow.landstede.dev/',
         isVisible: false,
+    },
+    {
+        id: 4,
+        name: 'Minecraft Server',
+        description: 'A Minecraft server website made in React and Typescript, it is a simple server made for a friend of mine.',
+        photo: 'minecraft.png',
+        url: 'https://minecraft.martvanweeghel.nl/',
+        isVisible: true,
     }
 ];
 

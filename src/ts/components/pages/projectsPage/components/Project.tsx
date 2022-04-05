@@ -1,5 +1,6 @@
 import { ProjectType } from '../../../../types/ProjectType';
 import { ReactComponent as JustDoItSVG } from '@images/justdoit.svg';
+import MinecraftPNG from '@images/minecraft.png';
 
 type Props = {
     project: ProjectType;
@@ -14,9 +15,11 @@ const Project = ({ project }: Props) => {
 
     return (
         <div onClick={() => onClick()} className="h-fit cursor-pointer shadow-xl hover:bg-gray-300 text-gray-600 hover:border-8 ease-in-out duration-300 w-full bg-white border rounded-lg overflow-hidden flex flex-col justify-center items-center p-0">
-            {photo === 'justdoit.svg'
+            {(photo === 'justdoit.svg')
                 ? <JustDoItSVG />
-                : <img className="object-center object-cover w-full max-h-64" src={photo} alt="Project" />
+                : (photo === 'minecraft.png')
+                    ? <img className="object-center object-cover w-full lg:h-96 " src={MinecraftPNG} alt='Project' />
+                    : <img className="object-center object-cover w-full lg:h-96" src={photo} alt="Project" />
             }
             <div className="text-center py-8 sm:py-6 h-full whitespace-pre-wrap">
                 <p className="text-xl text-black font-bold mb-2">{name}</p>
