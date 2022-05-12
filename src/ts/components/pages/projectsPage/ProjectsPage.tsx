@@ -4,25 +4,23 @@ import { Helmet } from 'react-helmet';
 import Project from './components/Project';
 import projects from '../../../utils/data/Projects';
 
-const ProjectsPage = () => {
-    return (
-        <Layout>
-            <Helmet>
-                <title>Mart van Weeghel - Projects</title>
-            </Helmet>
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12 ">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {projects.map((project: ProjectType) => {
-                        if (!project.isVisible) return null;
-                        return (
-                            <Project key={project.id} project={project} />
-                        );
-                    })}
-                </div>
-            </section>
-        </Layout>
-    );
-};
+const ProjectsPage = () => (
+    <Layout>
+        <Helmet>
+            <title>Mart van Weeghel - Projects</title>
+        </Helmet>
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {projects.map((project: ProjectType) => {
+                    if (!project.isVisible) return null;
+                    return (
+                        <Project key={project.id} project={project} />
+                    );
+                })}
+            </div>
+        </section>
+    </Layout>
+);
 
 
 export default ProjectsPage;

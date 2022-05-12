@@ -9,24 +9,22 @@ import AboutPage from './components/pages/aboutPage/AboutPage';
 import ContactPage from './components/pages/contactPage/ContactPage';
 import NavBar from '@components/features/navBar/NavBar';
 
-const App = () => {
-  return (
-    <AppContext>
-      <BrowserRouter>
-        <ErrorBoundary>
-          <NavBar>
-            <RoutesWrapper>
-              <Route path='/' element={<Navigate to={PagePath.home} />} />
-              <Route path={PagePath.home} element={<HomePage />} />
-              <Route path={PagePath.projects} element={<ProjectsPage />} />
-              <Route path={PagePath.about} element={<AboutPage />} />
-              <Route path={PagePath.contact} element={<ContactPage />} />
-            </RoutesWrapper>
-          </NavBar>
-        </ErrorBoundary>
-      </BrowserRouter>
-    </AppContext>
-  );
-};
+const App = () => (
+  <AppContext>
+    <BrowserRouter>
+      <ErrorBoundary>
+        <NavBar>
+          <RoutesWrapper>
+            <Route path='/' element={<Navigate to={PagePath.home} />} />
+            <Route path={PagePath.home} element={<HomePage />} />
+            <Route path={PagePath.projects} element={<ProjectsPage />} />
+            <Route path={PagePath.about} element={<AboutPage />} />
+            <Route path={PagePath.contact} element={<ContactPage />} />
+          </RoutesWrapper>
+        </NavBar>
+      </ErrorBoundary>
+    </BrowserRouter>
+  </AppContext>
+);
 
 export default App;

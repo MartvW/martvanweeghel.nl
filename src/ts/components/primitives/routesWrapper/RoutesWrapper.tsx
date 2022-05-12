@@ -6,13 +6,11 @@ type Props = {
     children: ReactChild[] | ReactChild;
 };
 
-const RoutesWrapper = ({ children }: Props) => {
-    return (
-        <Routes>
-            {children}
-            <Route path="*" element={<ErrorPage error={404} />} />
-        </Routes>
-    );
-};
+const RoutesWrapper = ({ children }: Props) => (
+    <Routes>
+        {children}
+        <Route path="*" element={<ErrorPage error={404} />} />
+    </Routes>
+);
 
 export default RoutesWrapper;
