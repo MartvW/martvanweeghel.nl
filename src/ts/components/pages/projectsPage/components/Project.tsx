@@ -1,30 +1,22 @@
 import { ProjectType } from '../../../../types/ProjectType';
-import { ReactComponent as JustDoItSVG } from '@images/justdoit.svg';
-import MinecraftPNG from '@images/minecraft.png';
 
 type Props = {
     project: ProjectType;
 };
 
 const Project = ({ project }: Props) => {
-    const { name, description, photo, url } = project;
-
-    const onClick = () => {
-        window.open(url, '_blank');
+    const goToProject = () => {
+        window.open(project.url, '_blank');
     };
-
     return (
-        <div onClick={() => onClick()} className="h-fit cursor-pointer shadow-xl hover:bg-gray-300 text-gray-600 hover:border-8 ease-in-out duration-300 w-full bg-white border rounded-lg overflow-hidden flex flex-col justify-center items-center p-0">
-            {(photo === 'justdoit.svg')
-                ? <JustDoItSVG />
-                : (photo === 'minecraft.png')
-                    ? <img className="object-center object-cover w-full lg:h-96 " src={MinecraftPNG} alt='Project' />
-                    : <img className="object-center object-cover w-full lg:h-96" src={photo} alt="Project" />
-            }
-            <div className="text-center py-8 sm:py-6 h-full whitespace-pre-wrap">
-                <p className="text-xl text-black font-bold mb-2">{name}</p>
-                <p className="text-base font-normal mx-5">{description}</p>
-                <p className='text-sm mt-2'>{url}</p>
+        <div onClick={() => goToProject()} className="flex flex-wrap w-full md:w-1/3" title={project.name}>
+            <div className="relative w-full m-2  md:m-3 cursor-pointer">
+                <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg"
+                    src={project.photo} />
+                <div className="absolute top-0 right-0 rounded-lg bottom-0 left-0 w-full h-full overflow-hidden bg-fixed md:opacity-0 opacity-50 hover:opacity-100 transition duration-300 ease-in-out flex flex-col items-center justify-center p-5" style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}>
+                    <h1 className='text-white font-bold uppercase text-1xl md:text-3xl max-w-full px-5 truncate'>{project.name}</h1>
+                    <h1 className='text-white text-md md:text-1xl font-thin uppercase italic text-center'>{project.description}</h1>
+                </div>
             </div>
         </div>
     );

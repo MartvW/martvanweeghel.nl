@@ -13,6 +13,9 @@
       "@sass/*": [
         "./src/sass/*"
       ],
+      "@api/*": [
+        "./src/ts/api/*"
+      ],
       "@components/*": [
         "./src/ts/components/*"
       ],
@@ -21,6 +24,12 @@
       ],
       "@types/*": [
         "./src/ts/types/*"
+      ],
+      "@hooks/*": [
+        "./src/ts/hooks/*"
+      ],
+      "@repository/*": [
+        "./src/ts/repository/*"
       ],
       "@utils/*": [
         "./src/ts/utils/*"

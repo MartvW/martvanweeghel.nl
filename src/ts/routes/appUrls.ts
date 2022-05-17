@@ -1,6 +1,3 @@
-export const PagePath = {
-    home: '/home',
+export const APIPath = {
     projects: '/projects',
-    about: '/about',
-    contact: '/contact',
 };
