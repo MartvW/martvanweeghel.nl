@@ -8,6 +8,7 @@ const Project = ({ project }: Props) => {
     const goToProject = () => {
         window.open(project.url, '_blank');
     };
+
     return (
         <div onClick={() => goToProject()} className="flex flex-wrap w-full md:w-1/3" title={project.name}>
             <div className="relative w-full m-2  md:m-3 cursor-pointer">
