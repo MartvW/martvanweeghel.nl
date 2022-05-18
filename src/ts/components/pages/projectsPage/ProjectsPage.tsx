@@ -19,7 +19,7 @@ const ProjectsPage = () => {
     }, [data]);
 
     return (
-        <div className='absolute top-full mt-24 left-0 h-screen w-full flex justify-center items-center py-1 px-1'>
+        <div className='my-24 h-screen w-full flex items-center py-24 px-24 '>
             <div id='projects' className='w-full h-full flex justify-center items-center flex-col gap-5'>
                 <h1 className='text-5xl font-thin'>Projects</h1>
                 <div className="container px-10 py-10 w-3/4">

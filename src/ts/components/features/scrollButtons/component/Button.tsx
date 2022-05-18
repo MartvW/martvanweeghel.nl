@@ -1,19 +1,25 @@
 type Props = {
     name: string;
+    setIsActive: any;
     isActive: boolean;
     elementId: string;
 };
 
-const Button = ({ name, isActive, elementId }: Props) => {
+const Button = ({ name, isActive, setIsActive, elementId }: Props) => {
     const scrollSmoothToElement = () => {
         const element = document.getElementById(elementId);
-        element.scrollIntoView({
+        window.scrollTo({
+            top: element.offsetTop,
             behavior: 'smooth',
         });
+
+        setTimeout(() => {
+            setIsActive(true);
+        }, 10);
     };
 
     return (
-        <button onClick={() => scrollSmoothToElement()} className={` bg-blue-500 h-12 hover:bg-blue-600 float-right w-24 ${isActive ? 'w-36 bg-blue-700' : ''} text-white rounded-lg p-2 ease-in-out duration-500`}>
+        <button onClick={() => scrollSmoothToElement()} className={`text-right float-right w-24 ${isActive ? 'w-36 bg-blue-500 text-white' : 'text-black'} rounded-lg p-2 ease-in-out duration-500`}>
             {name}
         </button>
     );
