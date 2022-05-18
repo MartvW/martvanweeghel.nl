@@ -16,9 +16,9 @@ const App = () => (
       <Layout>
         <HomePage />
         <Seperator />
-        <ProjectsPage />
-        <Seperator />
         <AboutPage />
+        <Seperator />
+        <ProjectsPage />
         <Seperator />
         <ContactPage />
         <ScrollButtons />

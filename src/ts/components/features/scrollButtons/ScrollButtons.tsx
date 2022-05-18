@@ -23,10 +23,10 @@ const ScrollButtons = () => {
     window.addEventListener('scroll', setActiveButton);
 
     return (
-        <div className='fixed top-0 right-5 w-1/12 flex justify-center items-end h-full flex-col gap-1'>
+        <div className='fixed md:top-0 bottom-5 md:right-5 right-0 md:w-1/12 w-full flex justify-center items-end h-full md:flex-col flex-row md:gap-1 gap-5 md:m-0 '>
             <Button name='Home' setIsActive={setHomeVisible} isActive={homeVisible} elementId='home' />
-            <Button name='Projects' setIsActive={setProjectVisible} isActive={projectVisible} elementId='projects' />
             <Button name='About' setIsActive={setAboutVisible} isActive={aboutVisible} elementId='about' />
+            <Button name='Projects' setIsActive={setProjectVisible} isActive={projectVisible} elementId='projects' />
             <Button name='Contact' setIsActive={setContactVisible} isActive={contactVisible} elementId='contact' />
         </div>
     );

@@ -1,28 +1,16 @@
 import AlertBox from '@components/primitives/alertBox/AlertBox';
 import useFetchProjects from '@hooks/projects/useFetchProjects';
-import { useEffect, useState } from 'react';
 import { ProjectType } from '../../../types/ProjectType';
 import Project from './components/Project';
 
 const ProjectsPage = () => {
-    const [projects, setProjects] = useState([]);
-    const { data } = useFetchProjects();
-
-    useEffect(() => {
-        if (!data) return;
-        // eslint-disable-next-line array-callback-return
-        data?.map((project: ProjectType) => {
-            if (project.isVisible) {
-                setProjects((projects: ProjectType[]) => [...projects, project]);
-            }
-        });
-    }, [data]);
+    const { projects } = useFetchProjects();
 
     return (
-        <div className='my-24 h-screen w-full flex items-center py-24 px-24 '>
+        <div className='my-24 md:h-screen h-fit w-full flex justify-center items-center py-24 px-24'>
             <div id='projects' className='w-full h-full flex justify-center items-center flex-col gap-5'>
-                <h1 className='text-5xl font-thin'>Projects</h1>
-                <div className="container px-10 py-10 w-3/4">
+                <h1 className='text-5xl mt-24 font-thin'>Projects</h1>
+                <div className="container md:px-10 md:py-10 md:w-3/4">
                     <div className="flex flex-wrap">
                         {projects
                             ? projects?.length > 0
