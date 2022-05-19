@@ -1,4 +1,4 @@
-import { ProjectType } from '../../../../types/ProjectType';
+import { ProjectType } from '@ProjectType';
 
 type Props = {
     project: ProjectType;

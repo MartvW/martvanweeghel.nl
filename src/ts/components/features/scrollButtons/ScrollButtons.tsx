@@ -6,6 +6,7 @@ const ScrollButtons = () => {
     const [projectVisible, setProjectVisible] = useState(false);
     const [homeVisible, setHomeVisible] = useState(false);
     const [aboutVisible, setAboutVisible] = useState(false);
+    const [skillsVisible, setSkillsVisible] = useState(false);
     const [contactVisible, setContactVisible] = useState(false);
 
     useEffect(() => {
@@ -17,6 +18,7 @@ const ScrollButtons = () => {
         setHomeVisible(isInViewport('home'));
         setAboutVisible(isInViewport('about'));
         setContactVisible(isInViewport('contact'));
+        setSkillsVisible(isInViewport('skills'));
         setHomeVisible(window.scrollY === 0);
     };
 
@@ -27,6 +29,7 @@ const ScrollButtons = () => {
             <Button name='Home' setIsActive={setHomeVisible} isActive={homeVisible} elementId='home' />
             <Button name='About' setIsActive={setAboutVisible} isActive={aboutVisible} elementId='about' />
             <Button name='Projects' setIsActive={setProjectVisible} isActive={projectVisible} elementId='projects' />
+            <Button name='Skills' setIsActive={setSkillsVisible} isActive={skillsVisible} elementId='skills' />
             <Button name='Contact' setIsActive={setContactVisible} isActive={contactVisible} elementId='contact' />
         </div>
     );

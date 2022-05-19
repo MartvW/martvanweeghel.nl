@@ -1,6 +1,7 @@
 import InstagramPNG from '@images/instagram.png';
 import LinkedinPNG from '@images/linkedin.png';
 import MailPNG from '@images/mail.png';
+import GithubPNG from '@images/github.png';
 import Contact from './components/Contact';
 
 const ContactPage = () => (
@@ -12,6 +13,7 @@ const ContactPage = () => (
                     <Contact src={InstagramPNG} alt='Instagram' href='https://www.instagram.com/martvanweeghel/' />
                     <Contact src={LinkedinPNG} alt='Linkedin' href='https://www.linkedin.com/in/martvanweeghel/' />
                     <Contact src={MailPNG} alt='Mail' href='mailto:mart@martvanweeghel.nl' />
+                    <Contact src={GithubPNG} alt='Github' href='https://github.com/MartvW' />
                 </div>
             </div>
         </div>

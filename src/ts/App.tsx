@@ -4,6 +4,7 @@ import AboutPage from '@components/pages/aboutPage/AboutPage';
 import ContactPage from '@components/pages/contactPage/ContactPage';
 import HomePage from '@components/pages/homePage/HomePage';
 import ProjectsPage from '@components/pages/projectsPage/ProjectsPage';
+import SkillsPage from '@components/pages/skillsPage/SkillsPage';
 import Layout from '@components/primitives/layout/Layout';
 import Seperator from '@components/primitives/seperator/Seperator';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -19,6 +20,8 @@ const App = () => (
         <AboutPage />
         <Seperator />
         <ProjectsPage />
+        <Seperator />
+        <SkillsPage />
         <Seperator />
         <ContactPage />
         <ScrollButtons />

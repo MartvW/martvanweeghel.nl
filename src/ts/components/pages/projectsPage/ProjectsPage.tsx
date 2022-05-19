@@ -1,6 +1,6 @@
 import AlertBox from '@components/primitives/alertBox/AlertBox';
 import useFetchProjects from '@hooks/projects/useFetchProjects';
-import { ProjectType } from '../../../types/ProjectType';
+import { ProjectType } from '@ProjectType';
 import Project from './components/Project';
 
 const ProjectsPage = () => {
