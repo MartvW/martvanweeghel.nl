@@ -6,8 +6,8 @@ const isInViewport = (id: string) => {
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight - 5 || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth - 5 || document.documentElement.clientWidth)
+        rect.bottom <= (window.innerHeight - 5 || document.documentElement.clientHeight - 5) &&
+        rect.right <= (window.innerWidth - 5 || document.documentElement.clientWidth - 5)
     );
 };
 
