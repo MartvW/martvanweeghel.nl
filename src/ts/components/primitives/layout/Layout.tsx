@@ -13,7 +13,7 @@ const Layout = ({ children }: Props) => {
     }, 100);
 
     const className = classNames("absolute top-0 left-0  w-full h-full bg-primary ease-in-out duration-700", {
-        'opacity-0': !isLoading,
+        'opacity-0 hidden': !isLoading,
         'opaity-100': isLoading,
     });
 
