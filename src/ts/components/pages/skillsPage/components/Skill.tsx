@@ -1,18 +1,18 @@
-import { SkillType } from '@SkillType';
+import { SkillType } from "@SkillType";
 
 type Props = {
-    skill: SkillType;
+  skill: SkillType;
 };
 
 const Skill = ({ skill }: Props) => {
-    return (
-        <div className='w-1/5 h-full flex flex-row gap-5'>
-            <div className='flex items-center gap-5 flex-row justify-center'>
-                <img src={skill.icon} alt={skill.name} className='w-auto h-8' />
-                <h1 className='md:visible invisible text-black truncate'>{skill.name}</h1>
-            </div>
-        </div>
-    );
+  return (
+    <div className="w-full h-full">
+      <div className="grid grid-cols-4 md:grid-cols-5 md:justify-center">
+        <img src={skill.icon} alt={skill.name} className="w-auto h-8" />
+        <h1 className="text-black truncate mb-5">{skill.name}</h1>
+      </div>
+    </div>
+  );
 };
 
 export default Skill;

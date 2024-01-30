@@ -3,7 +3,7 @@ import axios from 'axios';
 const defaultTimeoutLength = 4000; // 4 seconds
 
 const axiosInstance = axios.create({
-    baseURL: 'https://api.martvanweeghel.nl/martvanweeghel',
+    baseURL: 'http://192.168.2.29:3005/martvanweeghel',
     headers: {
         'Accept': 'application/json',
         'Cache-Control': 'no-cache',

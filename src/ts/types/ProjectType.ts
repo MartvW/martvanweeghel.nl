@@ -1,7 +1,7 @@
 import { SkillType } from './SkillType';
 
 export type ProjectType = {
-    id: string;
+    _id: string;
     name: string;
     description: string;
     photo: string;
