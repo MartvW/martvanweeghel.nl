@@ -16,7 +16,6 @@ const Project = ({ project }: Props) => {
   return (
     <li
       className="w-full flex justify-between gap-x-6 py-5 cursor-pointer hover:bg-gray-100"
-      title={project.name}
       onClick={goToProject}
     >
       <div className="flex min-w-0 gap-x-4">
@@ -29,7 +28,10 @@ const Project = ({ project }: Props) => {
           <p className="text-lg font-semibold leading-6 text-gray-900">
             {project.name}
           </p>
-          <p className="md:visible invisible md:mt-1 truncate text-md leading-5 text-gray-500">
+          <p
+            className="md:visible invisible md:mt-1 truncate text-md leading-5 text-gray-500"
+            title={project.description}
+          >
             {project.description}
           </p>
           <div className="flex gap-2 md:mt-1">
@@ -41,6 +43,7 @@ const Project = ({ project }: Props) => {
                 <img
                   key={`${project.name}-${skill}`}
                   className="w-auto h-5"
+                  title={skill}
                   src={currentSkill?.icon}
                   alt={skill}
                 />

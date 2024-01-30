@@ -21,7 +21,7 @@ const SkillsPage = () => {
                 skills?.map((skill: SkillType) => (
                   <div
                     key={skill._id}
-                    className="relative grid md:grid-cols-[400px_minmax(1000px,1fr)_100px] w-full"
+                    className="relative grid md:grid-cols-[50%_minmax(75%,1fr)_100px] w-full"
                   >
                     <Skill skill={skill} />
                     <Slider skill={skill} />
