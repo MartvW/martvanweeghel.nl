@@ -18,15 +18,18 @@ const SkillsPage = () => {
           <div className="flex flex-col gap-10">
             {skills ? (
               skills?.length > 0 ? (
-                skills?.map((skill: SkillType) => (
-                  <div
-                    key={skill._id}
-                    className="relative grid md:grid-cols-[50%_minmax(75%,1fr)_100px] w-full"
-                  >
-                    <Skill skill={skill} />
-                    <Slider skill={skill} />
-                  </div>
-                ))
+                skills?.map((skill: SkillType) => {
+                  if (!skill.isVisible) return <></>;
+                  return (
+                    <div
+                      key={skill._id}
+                      className="relative grid md:grid-cols-[50%_minmax(75%,1fr)_100px] w-full"
+                    >
+                      <Skill skill={skill} />
+                      <Slider skill={skill} />
+                    </div>
+                  );
+                })
               ) : (
                 <AlertBox color="orange" message="No skills found" />
               )
