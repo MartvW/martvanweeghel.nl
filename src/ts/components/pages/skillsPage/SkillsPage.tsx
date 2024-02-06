@@ -19,7 +19,7 @@ const SkillsPage = () => {
             {skills ? (
               skills?.length > 0 ? (
                 skills?.map((skill: SkillType) => {
-                  if (!skill.isVisible) return <></>;
+                  if (!skill?.isVisible) return <></>;
                   return (
                     <div
                       key={skill._id}
