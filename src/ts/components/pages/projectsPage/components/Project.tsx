@@ -39,10 +39,12 @@ const Project = ({ project }: Props) => {
               const currentSkill = skills?.find(
                 (s: SkillType) => s.name === skill
               ) as SkillType;
-              if (!currentSkill?.isVisible) return <></>;
+
+              const skillKey = `${project.name}-${skill}`;
+              if (!currentSkill?.isVisible) return <div key={skillKey}></div>;
               return (
                 <img
-                  key={`${project.name}-${skill}`}
+                  key={skillKey}
                   className="w-auto h-5"
                   title={skill}
                   src={currentSkill?.icon}

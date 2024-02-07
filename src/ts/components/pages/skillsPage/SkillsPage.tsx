@@ -8,7 +8,7 @@ const SkillsPage = () => {
   const { skills } = useFetchSkills();
 
   return (
-    <div className="my-24 md:h-screen h-fit w-full flex justify-center items-center py-24 px-24">
+    <div className="h-fit w-full flex justify-center items-center py-24 px-12 md:px-24">
       <div
         id="skills"
         className="w-full h-full flex justify-center items-center flex-col gap-5"
@@ -19,11 +19,11 @@ const SkillsPage = () => {
             {skills ? (
               skills?.length > 0 ? (
                 skills?.map((skill: SkillType) => {
-                  if (!skill?.isVisible) return <></>;
+                  if (!skill?.isVisible) return <div key={skill._id}></div>;
                   return (
                     <div
                       key={skill._id}
-                      className="relative grid md:grid-cols-[50%_minmax(75%,1fr)_100px] w-full"
+                      className="relative grid grid-rows-2 md:grid-cols-[50%_minmax(75%,1fr)_100px] w-full"
                     >
                       <Skill skill={skill} />
                       <Slider skill={skill} />

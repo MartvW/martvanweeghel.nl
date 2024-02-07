@@ -7,7 +7,7 @@ const ProjectsPage = () => {
   const { projects } = useFetchProjects();
 
   return (
-    <div className="my-24 md:h-screen h-fit w-full flex justify-center items-center py-24 px-24">
+    <div className="my-24 md:h-screen h-fit w-full flex justify-center items-center py-24 px-12 md:px-24">
       <div
         id="projects"
         className="w-full h-full flex justify-center items-center flex-col gap-5"
@@ -19,7 +19,7 @@ const ProjectsPage = () => {
             {projects ? (
               projects?.length > 0 ? (
                 projects?.map((project: ProjectType) => {
-                  if (!project.isVisible) return <></>;
+                  if (!project.isVisible) return <div key={project._id}></div>;
                   return <Project key={project._id} project={project} />;
                 })
               ) : (
