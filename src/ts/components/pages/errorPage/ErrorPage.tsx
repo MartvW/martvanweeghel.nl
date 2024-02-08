@@ -6,7 +6,7 @@ type Props = {
 };
 
 const ErrorPage = ({ error, errorInfo }: Props) => {
-  if (process.env.NODE_ENV === "production") {
+  if (process.env.NODE_ENV !== "development") {
     error = "Oops!";
     errorInfo = "Something went wrong, please try again later!";
   }

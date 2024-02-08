@@ -34,7 +34,7 @@
     "build": "craco build",
     "eject": "craco eject",
     "deploy": "npm i; npm run build; docker buildx build --platform linux/arm64 -t martvanweeghel/martvanweeghel.nl:latest --push .",
-    "github": "git add .; git commit -m \"Update\"; git push origin main"
+    "github": "git add . && echo 'Enter Commit Message' && read message && git commit -m \"$message\" && git push"
   },
   "author": {
     "name": "Mart van Weeghel",
