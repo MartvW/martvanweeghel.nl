@@ -1,15 +1,12 @@
 module.exports = {
-  darkMode: 'class',
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-  ],
+  darkMode: "class",
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       backgroundColor: {
-        primary: 'var(--color-bg-primary)',
+        primary: "var(--color-bg-primary)",
       },
-      textColor: {
-      },
+      textColor: {},
     },
   },
   plugins: [],

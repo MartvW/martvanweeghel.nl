@@ -1,4 +1,5 @@
 export const APIPath = {
-    projects: '/projects',
-    skills: '/skills',
+  projects: "/projects",
+  skills: "/skills",
+  contacts: "/contacts",
 };

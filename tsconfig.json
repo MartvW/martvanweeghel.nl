@@ -1,42 +1,18 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "paths": {
-      "@images/*": [
-        "./src/images/*"
-      ],
-      "@sass/*": [
-        "./src/sass/*"
-      ],
-      "@api/*": [
-        "./src/ts/api/*"
-      ],
-      "@components/*": [
-        "./src/ts/components/*"
-      ],
-      "@routes/*": [
-        "./src/ts/routes/*"
-      ],
-      "@SkillType": [
-        "./src/ts/types/SkillType"
-      ],
-      "@ProjectType": [
-        "./src/ts/types/ProjectType"
-      ],
-      "@hooks/*": [
-        "./src/ts/hooks/*"
-      ],
-      "@repository/*": [
-        "./src/ts/repository/*"
-      ],
-      "@utils/*": [
-        "./src/ts/utils/*"
-      ]
+      "@images/*": ["./src/images/*"],
+      "@sass/*": ["./src/sass/*"],
+      "@api/*": ["./src/ts/api/*"],
+      "@components/*": ["./src/ts/components/*"],
+      "@routes/*": ["./src/ts/routes/*"],
+      "@SkillType": ["./src/ts/types/SkillType"],
+      "@ProjectType": ["./src/ts/types/ProjectType"],
+      "@hooks/*": ["./src/ts/hooks/*"],
+      "@repository/*": ["./src/ts/repository/*"],
+      "@utils/*": ["./src/ts/utils/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
@@ -51,9 +27,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
