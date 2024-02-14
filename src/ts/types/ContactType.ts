@@ -4,4 +4,5 @@ export type ContactType = {
   icon: string;
   url: string;
   isVisible: boolean;
+  type: string;
 };
