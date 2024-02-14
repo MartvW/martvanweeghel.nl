@@ -29,7 +29,7 @@ const ContactPage = () => {
                   );
                 })
               ) : (
-                <AlertBox color="orange" message="No projects found" />
+                <AlertBox color="orange" message="No contacts found" />
               )
             ) : (
               <AlertBox
