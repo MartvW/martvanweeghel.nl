@@ -19,7 +19,7 @@ const AboutPage = () => {
           <p className="md:text-xl text-md">
             Hey, I'm <Highlight color="orange">Mart van Weeghel</Highlight> I am{" "}
             <Highlight color="blue">
-              {calculateAge("2004-04-30")} years old
+              {calculateAge("2004-04-30 00:00")} years old
             </Highlight>{" "}
             and currently living in{" "}
             <Highlight color="red">The Netherlands</Highlight>
